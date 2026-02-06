@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imaan Interactive | Ramadan 2026</title>
+    <meta name="description" content="Imaan Interactive - রমজান ২০২৬ এর সঠিক সেহরি ও ইফতারের সময়সূচী। ৬৪ জেলার ক্যালেন্ডার ও জাকাত ক্যালকুলেটর।">
+<meta name="keywords" content="Ramadan 2026, রমজান ২০২৬, ইফতারের সময়, সেহরির সময়, Ramadan Calendar Bangladesh">
+<meta name="author" content="Your Name">
+
+<meta property="og:title" content="Imaan Interactive | Ramadan Calendar 2026">
+<meta property="og:description" content="বাংলাদেশের ৬৪ জেলার সঠিক রমজান ক্যালেন্ডার ২০২৬।">
+<meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="home-section" class="page-section">
+        <header class="banner">
+            <div class="overlay">
+                <h2 class="brand-name">Imaan Interactive</h2>
+                <h1 class="main-title">Ramadan Calendar 2026</h1>
+                
+                <div id="countdown-container">
+                    <p>Ramadan Starts In:</p>
+                    <div id="timer">
+                        <span id="days">00</span>d : <span id="hours">00</span>h : <span id="minutes">00</span>m : <span id="seconds">00</span>s
+                    </div>
+                </div>
+
+                <div class="location-picker">
+                    <label for="district">Select District:</label>
+                    <select id="district" onchange="initApp()">
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Chittagong">Chittagong</option>
+                        <option value="Sylhet">Sylhet</option>
+                        <option value="Rajshahi">Rajshahi</option>
+                        <option value="Khulna">Khulna</option>
+                        <option value="Barisal">Barisal</option>
+                        <option value="Rangpur">Rangpur</option>
+                        <option value="Mymensingh">Mymensingh</option>
+                        <option value="Comilla">Comilla</option>
+                        <option value="Gazipur">Gazipur</option>
+                        <option value="Noakhali">Noakhali</option>
+                        <option value="Feni">Feni</option>
+                        <option value="Bogura">Bogura</option>
+                        <option value="Narayanganj">Narayanganj</option>
+<option value="Munshiganj">Munshiganj</option>
+<option value="Narsingdi">Narsingdi</option>
+<option value="Manikganj">Manikganj</option>
+<option value="Tangail">Tangail</option>
+<option value="Faridpur">Faridpur</option>
+<option value="Gopalganj">Gopalganj</option>
+<option value="Madaripur">Madaripur</option>
+<option value="Rajbari">Rajbari</option>
+<option value="Shariatpur">Shariatpur</option>
+<option value="Kishoreganj">Kishoreganj</option>
+<option value="Jamalpur">Jamalpur</option>
+<option value="Netrokona">Netrokona</option>
+<option value="Sherpur">Sherpur</option>
+<option value="Coxs Bazar">Cox's Bazar</option>
+<option value="Brahmanbaria">Brahmanbaria</option>
+<option value="Chandpur">Chandpur</option>
+<option value="Lakshmipur">Lakshmipur</option>
+<option value="Rangamati">Rangamati</option>
+<option value="Khagrachari">Khagrachari</option>
+<option value="Bandarban">Bandarban</option>
+<option value="Sunamganj">Sunamganj</option>
+<option value="Habiganj">Habiganj</option>
+<option value="Moulvibazar">Moulvibazar</option>
+<option value="Chapai Nawabganj">Chapai Nawabganj</option>
+<option value="Naogaon">Naogaon</option>
+<option value="Natore">Natore</option>
+<option value="Pabna">Pabna</option>
+<option value="Sirajganj">Sirajganj</option>
+<option value="Joypurhat">Joypurhat</option>
+<option value="Dinajpur">Dinajpur</option>
+<option value="Gaibandha">Gaibandha</option>
+<option value="Kurigram">Kurigram</option>
+<option value="Lalmonirhat">Lalmonirhat</option>
+<option value="Nilphamari">Nilphamari</option>
+<option value="Panchagarh">Panchagarh</option>
+<option value="Thakurgaon">Thakurgaon</option>
+<option value="Bagerhat">Bagerhat</option>
+<option value="Chuadanga">Chuadanga</option>
+<option value="Jessore">Jessore</option>
+<option value="Jhenaidah">Jhenaidah</option>
+<option value="Kushtia">Kushtia</option>
+<option value="Magura">Magura</option>
+<option value="Meherpur">Meherpur</option>
+<option value="Narail">Narail</option>
+<option value="Satkhira">Satkhira</option>
+<option value="Barguna">Barguna</option>
+<option value="Bhola">Bhola</option>
+<option value="Jhalokati">Jhalokati</option>
+<option value="Patuakhali">Patuakhali</option>
+<option value="Pirojpur">Pirojpur</option>
+                        </select>
+                </div>
+            </div>
+        </header>
+
+        <section class="today-info">
+            <div class="card">
+                <h3>Sehri Ends</h3>
+                <p id="sehri-time">--:-- AM</p>
+            </div>
+            <div class="card">
+                <h3>Iftar Starts</h3>
+                <p id="iftar-time">--:-- PM</p>
+            </div>
+        </section>
+    </div>
+
+    <div id="app-content">
+        <section id="calendar-section" class="page-section" style="display: none;">
+            <h2 class="section-title">Full Month Schedule</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ramadan</th>
+                            <th>Date</th>
+                            <th>Sehri</th>
+                            <th>Iftar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendar-body">
+                        </tbody>
+                </table>
+                <div style="padding: 15px; margin-top: 10px; background-color: rgba(255, 204, 0, 0.1); border-radius: 8px; border-left: 4px solid #ffcc00;">
+    <p style="color: #ffcc00; font-size: 13px; margin: 0; line-height: 1.5;">
+        <strong>সতর্কতা:</strong> জেলাভিত্তিক সময়ের পার্থক্যের কারণে ইসলামিক ফাউন্ডেশনের মূল সময়সূচীর সাথে ১-২ মিনিটের সতর্কতা অবলম্বন করা বাঞ্ছনীয়।
+    </p>
+</div>
+            </div>
+        </section>
+
+        <section id="tasbih-section" class="page-section" style="display: none;">
+            <h2 class="section-title">Digital Tasbih</h2>
+            <div class="tasbih-card">
+                <div id="counter-display">0</div>
+                <button id="count-btn">TAP</button><br><br>
+                <button id="reset-btn">Reset</button>
+            </div>
+        </section>
+
+       <section id="tools-section" class="page-section" style="display: none; padding: 20px; color: white;">
+    <h2 class="section-title" style="text-align: center; color: #ffcc00;">Islamic Tools</h2>
+
+    <div style="background: #1a261a; padding: 15px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #334433;">
+        <h3 style="color: #ffcc00; margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px;">Zakat Calculator</h3>
+        
+        <div style="margin-bottom: 10px;">
+            <label style="font-size: 14px; color: #aaa;">নগদ টাকা ও ব্যাংক ব্যালেন্স:</label>
+            <input type="number" id="cash-wealth" placeholder="টাকার পরিমাণ লিখুন" 
+                   style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #333; background: #000; color: #fff;">
+        </div>
+
+        <div style="margin-bottom: 10px;">
+            <label style="font-size: 14px; color: #aaa;">স্বর্ণের মূল্য (টাকায়):</label>
+            <input type="number" id="gold-wealth" placeholder="স্বর্ণের বর্তমান বাজারমূল্য" 
+                   style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #333; background: #000; color: #fff;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label style="font-size: 14px; color: #aaa;">ব্যবসার পণ্য ও অন্যান্য সম্পদ:</label>
+            <input type="number" id="other-wealth" placeholder="অন্যান্য সম্পদের মূল্য" 
+                   style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #333; background: #000; color: #fff;">
+        </div>
+        
+        <button onclick="calculateZakat()" 
+                style="width: 100%; padding: 12px; background: #ffcc00; color: black; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 16px;">
+            মোট জাকাত হিসাব করুন
+        </button>
+        
+        <div id="zakat-result" style="margin-top: 15px; padding: 10px; border-radius: 5px; background: #0a110a; text-align: center;">
+            <span id="zakat-text" style="color: #00ff00; font-weight: bold; font-size: 18px;">৳ ০.০০</span>
+        </div>
+    </div>
+
+    <div style="background: #1a261a; padding: 15px; border-radius: 10px; border: 1px solid #334433;">
+        <h3 style="color: #ffcc00; margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px;">Ramadan Duas</h3>
+        <div style="margin-bottom: 15px;">
+            <h4 style="color: #ffcc00; margin-bottom: 5px;">সেহরির নিয়ত:</h4>
+            <p style="font-size: 14px; line-height: 1.6;">"নাওয়াইতু আন আসুমা গাদাম মিন শাহরি রামাদানাল মুবারাকি ফারদাল্লাকা ইয়া আল্লাহু ফাতাকাব্বাল মিন্নি ইন্নাকা আনতাস সামিউল আলিম।"</p>
+        </div>
+        <div>
+            <h4 style="color: #ffcc00; margin-bottom: 5px;">ইফতারের দোয়া:</h4>
+            <p style="font-size: 14px; line-height: 1.6;">"আল্লাহুম্মা লাকা সুমতু ওয়া আলা রিজকিকা আফতারতু।"</p>
+        </div>
+    </div>
+</section>
+
+
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active" onclick="showPage('home')">Home</a>
+        <a href="#" class="nav-item" onclick="showPage('calendar')">Calendar</a>
+        <a href="#" class="nav-item" onclick="showPage('tasbih')">Tasbih</a>
+        <a href="#" class="nav-item" onclick="showPage('tools')">Tools</a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>

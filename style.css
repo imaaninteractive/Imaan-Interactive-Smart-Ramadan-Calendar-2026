@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0d1b15; /* Dark Islamic Green */
+    color: white;
+}
+
+.banner {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1519810755548-39cd217da494?auto=format&fit=crop&q=80&w=1000');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 5px solid #d4af37; /* Golden border */
+}
+
+.brand-name {
+    color: #d4af37;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#timer {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.today-info {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: -50px; /* Overlap effect */
+}
+
+.card {
+    background: #1a2e25;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #d4af37;
+    width: 40%;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.card h3 { color: #d4af37; font-size: 0.9rem; }
+.card p { font-size: 1.8rem; font-weight: bold; }
+
+/* Page Section Management */
+.page-section {
+    padding: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section-title {
+    text-align: center;
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+/* Calendar Table Style */
+.table-container {
+    overflow-x: auto;
+    background: #1a2e25;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+th { background-color: #d4af37; color: #0d1b15; }
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #12241d;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-top: 2px solid #d4af37;
+}
+
+.nav-item {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.nav-item.active {
+    color: #d4af37;
+    font-weight: bold;
+}
+
+/* Tasbih Style */
+.tasbih-card {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#counter-display {
+    font-size: 5rem;
+    color: #d4af37;
+}
+
+#count-btn {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: none;
+    background: #d4af37;
+    color: #0d1b15;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
